@@ -36,9 +36,10 @@ header {
 }
 
 .header-image img {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
+  object-position: center top;
   border-radius: 50%;
   border: 2px solid var(--border-color);
   transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
