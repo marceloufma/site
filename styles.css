@@ -11,16 +11,16 @@
 }
 
 body {
-    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
-    line-height: 1.6;
-    width: 100%;
-    margin: 0;
-    padding: 2rem 4rem;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    font-weight: 300;
-    box-sizing: border-box;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-weight: 300;
 }
+
 
 header {
   margin-bottom: 1.5rem;
