@@ -271,6 +271,12 @@ section {
   box-shadow: 0 2px 5px rgba(74, 116, 185, 0.2);
 }
 
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Cria um espaço perfeito de 12px entre cada linha */
+}
+
 /* Awards section */
 .award-item {
   display: flex;
