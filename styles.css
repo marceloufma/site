@@ -102,3 +102,114 @@ body {
     color: #555;
     margin-top: 20px;
 }
+/* --- ESTILOS DA PÁGINA DE PUBLICAÇÕES (TEMPLATE MICHAEL COONS) --- */
+
+/* Título principal e subtítulos das seções */
+.page-title {
+    font-size: 2.8rem;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.5px;
+}
+
+.subpage-intro {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 18px 0;
+}
+
+.subpage-intro a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.section-label {
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 25px 0 15px 0;
+}
+
+.rule-thin {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Lista ordenada com números em destaque */
+.entry-list {
+    list-style: none; /* Remove a numeração padrão do navegador */
+    counter-reset: item;
+    padding-left: 0;
+    margin: 0 0 25px 0;
+}
+
+.entry-list li {
+    position: relative;
+    padding-left: 45px; /* Espaço para o número grande à esquerda */
+    margin-bottom: 18px;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+/* Formatação do número em negrito (ex: 3. 2. 1.) */
+.entry-list[reversed] li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Regras de contagem regressiva por seção */
+.entry-list[start="1"] li { counter-increment: item 1; }
+.entry-list[start="1"] li::before { content: "1."; }
+
+.entry-list[start="3"] { counter-reset: item 4; }
+.entry-list[start="3"] li { counter-increment: item -1; }
+.entry-list[start="3"] li::before { content: counter(item) "."; }
+
+.entry-list[start="4"] { counter-reset: item 5; }
+.entry-list[start="4"] li { counter-increment: item -1; }
+.entry-list[start="4"] li::before { content: counter(item) "."; }
+
+/* Coautores na primeira linha */
+.authors {
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+/* Título indentado na linha seguinte com itálico */
+.entry-details {
+    display: block;
+    margin-top: 2px;
+    padding-left: 15px; /* Recuo exatamente como no print */
+}
+
+.paper-title {
+    font-style: italic;
+    color: #000;
+    text-decoration: none;
+}
+
+.paper-title:hover {
+    text-decoration: underline;
+}
+
+/* Links em negrito para revistas */
+.entry-details strong {
+    font-weight: bold;
+}
+
+.back-link {
+    margin-top: 40px;
+    font-size: 1.05rem;
+}
+
+.back-link a {
+    color: #0000ee;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
