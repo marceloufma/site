@@ -1,215 +1,396 @@
-html, body {
+/* ---------------------------------------------------------
+   Marcelo Oliveira Ribeiro — academic homepage
+--------------------------------------------------------- */
+
+:root {
+    --ink: #000000;
+    --muted: #555555;
+    --link: #0000ee;
+    --rule-thick: #777777;
+    --rule-thin: #cccccc;
+
+    --max: 900px;
+    --side-pad: 24px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Times New Roman", Times, Georgia, serif;
-    color: #000;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+
+    background: #ffffff;
+    color: var(--ink);
+
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-size: 17px;
+    line-height: 1.5;
 }
 
 .wrap {
     width: 100%;
-    max-width: 800px; /* Alinha a largura máxima de toda a página */
-    padding: 24px;
-    box-sizing: border-box;
+    max-width: var(--max);
+    padding: var(--side-pad);
 }
 
-/* --- CABEÇALHO COMPACTO --- */
+
+/* ---------------------------------------------------------
+   Header
+--------------------------------------------------------- */
+
 .header-row {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 8px;
+    gap: 26px;
+    margin-bottom: 10px;
 }
 
-/* Foto proporcionalmente menor */
 .avatar {
-    width: 120px;
-    height: 155px;
-    border: 1px solid #000;
-    object-fit: cover;
+    width: 150px;
+    height: 190px;
     flex-shrink: 0;
+
+    object-fit: cover;
+
+    border: 1px solid #000000;
 }
 
 .name-block {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    padding-top: 2px;
 }
 
-/* Nome mais compacto */
 .name-block h1 {
-    margin: 0 0 6px 0;
-    font-size: 2.2rem;
+    margin: 0 0 12px 0;
+
+    font-size: 2.4rem;
     font-weight: normal;
-    line-height: 1.1;
+    line-height: 1;
+
     letter-spacing: -0.5px;
 }
 
-/* Afiliação e cargo em tamanho equilibrado */
 .affiliation {
     margin: 0;
-    font-size: 1.15rem;
-    line-height: 1.3;
-    color: #000;
+
+    font-size: 1.55rem;
+    line-height: 1.4;
+
+    color: var(--ink);
 }
 
 .affiliation a {
-    color: #0000ee;
+    color: var(--link);
     text-decoration: underline;
 }
 
-/* --- DIVISÓRIA --- */
+
+/* ---------------------------------------------------------
+   Horizontal rules
+--------------------------------------------------------- */
+
 .rule-thick {
     border: 0;
-    border-top: 1px solid #777;
-    margin: 16px 0 20px 0;
-}
+    border-top: 2px solid var(--rule-thick);
 
-/* --- TEXTO PRINCIPAL --- */
-.intro {
-    line-height: 1.5;
-    font-size: 1.1rem;
-    text-align: justify;
-    margin-bottom: 30px;
-}
-
-/* --- LINKS EM LINHA ÚNICA (LARGURA TOTAL) --- */
-.link-row {
-    display: flex;
-    justify-content: space-between; /* Distribui os 4 links uniformemente de ponta a ponta */
-    align-items: center;
-    width: 100%;
-    margin: 30px 0 40px 0;
-}
-
-.link-row a {
-    font-size: 1.15rem;
-    color: #0000ee;
-    text-decoration: underline;
-}
-
-/* --- RODAPÉ --- */
-.last-update {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 20px;
-}
-/* --- ESTILOS DA PÁGINA DE PUBLICAÇÕES (TEMPLATE MICHAEL COONS) --- */
-
-/* Título principal e subtítulos das seções */
-.page-title {
-    font-size: 2.8rem;
-    font-weight: normal;
-    margin: 0 0 10px 0;
-    letter-spacing: -0.5px;
-}
-
-.subpage-intro {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin: 18px 0;
-}
-
-.subpage-intro a {
-    color: #0000ee;
-    text-decoration: underline;
-}
-
-.section-label {
-    font-size: 1.4rem;
-    font-weight: normal;
-    margin: 25px 0 15px 0;
+    margin: 20px 0 24px 0;
 }
 
 .rule-thin {
     border: 0;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
+    border-top: 1px solid var(--rule-thin);
+
+    margin: 24px 0;
 }
 
-/* Lista ordenada com números em destaque */
-.entry-list {
-    list-style: none; /* Remove a numeração padrão do navegador */
-    counter-reset: item;
-    padding-left: 0;
-    margin: 0 0 25px 0;
-}
 
-.entry-list li {
-    position: relative;
-    padding-left: 45px; /* Espaço para o número grande à esquerda */
-    margin-bottom: 18px;
+/* ---------------------------------------------------------
+   Homepage introduction
+--------------------------------------------------------- */
+
+.intro {
+    margin: 0 0 25px;
+
     font-size: 1.15rem;
-    line-height: 1.4;
+    line-height: 1.5;
+
+    text-align: justify;
 }
 
-/* Formatação do número em negrito (ex: 3. 2. 1.) */
-.entry-list[reversed] li::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-    font-size: 1.2rem;
+
+/* ---------------------------------------------------------
+   Homepage navigation
+--------------------------------------------------------- */
+
+.link-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin: 30px 0 35px;
+
+    font-size: 1.15rem;
 }
 
-/* Regras de contagem regressiva por seção */
-.entry-list[start="1"] li { counter-increment: item 1; }
-.entry-list[start="1"] li::before { content: "1."; }
-
-.entry-list[start="3"] { counter-reset: item 4; }
-.entry-list[start="3"] li { counter-increment: item -1; }
-.entry-list[start="3"] li::before { content: counter(item) "."; }
-
-.entry-list[start="4"] { counter-reset: item 5; }
-.entry-list[start="4"] li { counter-increment: item -1; }
-.entry-list[start="4"] li::before { content: counter(item) "."; }
-
-/* Coautores na primeira linha */
-.authors {
-    display: inline-block;
-    margin-bottom: 2px;
-}
-
-/* Título indentado na linha seguinte com itálico */
-.entry-details {
-    display: block;
-    margin-top: 2px;
-    padding-left: 15px; /* Recuo exatamente como no print */
-}
-
-.paper-title {
-    font-style: italic;
-    color: #000;
-    text-decoration: none;
-}
-
-.paper-title:hover {
+.link-row a {
+    color: var(--link);
     text-decoration: underline;
 }
 
-/* Links em negrito para revistas */
-.entry-details strong {
+
+/* ---------------------------------------------------------
+   Last update
+--------------------------------------------------------- */
+
+.last-update {
+    margin: 15px 0 0;
+
+    text-align: center;
+
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+
+/* ---------------------------------------------------------
+   Subpages
+--------------------------------------------------------- */
+
+.page-title {
+    margin: 0 0 10px;
+
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 1.1;
+
+    letter-spacing: -0.5px;
+}
+
+.subpage-intro {
+    margin: 18px 0 28px;
+
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.subpage-intro a {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   Section headings
+--------------------------------------------------------- */
+
+.section-label {
+    margin: 25px 0 15px;
+
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+
+
+/* ---------------------------------------------------------
+   Publication lists
+--------------------------------------------------------- */
+
+.entry-list {
+    margin: 0 0 25px;
+    padding-left: 42px;
+
+    list-style: decimal;
+}
+
+.entry-list li {
+    margin-bottom: 18px;
+    padding-left: 5px;
+
+    font-size: 1.15rem;
+    line-height: 1.45;
+}
+
+.entry-list li::marker {
+    font-weight: normal;
+}
+
+
+/* ---------------------------------------------------------
+   Publication titles
+--------------------------------------------------------- */
+
+.entry-title {
+    color: var(--link);
+    font-style: italic;
+    text-decoration: none;
+}
+
+.entry-title:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   Journals / publishers
+--------------------------------------------------------- */
+
+.entry-list strong {
     font-weight: bold;
 }
 
+
+/* ---------------------------------------------------------
+   Teaching
+--------------------------------------------------------- */
+
+.teaching-table {
+    margin: 0;
+}
+
+.teaching-table dt {
+    margin: 22px 0 5px;
+
+    font-size: 1.15rem;
+    font-weight: normal;
+}
+
+.teaching-table dt:first-child {
+    margin-top: 0;
+}
+
+.teaching-table dd {
+    margin: 0 0 18px;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   Contact
+--------------------------------------------------------- */
+
+.contact-table {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    row-gap: 22px;
+    column-gap: 20px;
+
+    margin-bottom: 8px;
+}
+
+.contact-table dt {
+    grid-column: 1;
+
+    font-weight: bold;
+}
+
+.contact-table dd {
+    grid-column: 2;
+
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Back link
+--------------------------------------------------------- */
+
 .back-link {
     margin-top: 40px;
+
     font-size: 1.05rem;
 }
 
 .back-link a {
-    color: #0000ee;
+    color: var(--link);
     text-decoration: none;
 }
 
 .back-link a:hover {
     text-decoration: underline;
+}
+
+
+/* ---------------------------------------------------------
+   General links
+--------------------------------------------------------- */
+
+a {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* ---------------------------------------------------------
+   Responsive
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .wrap {
+        padding: 30px 20px 50px;
+    }
+
+    .name-block h1 {
+        font-size: 2.5rem;
+    }
+
+    .link-row {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .header-row {
+        flex-direction: column;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 190px;
+    }
+
+    .name-block h1 {
+        font-size: 2.4rem;
+    }
+
+    .link-row {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .contact-table {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+    }
+
+    .contact-table dt {
+        margin-top: 14px;
+    }
 }
