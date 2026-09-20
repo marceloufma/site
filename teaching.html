@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Marcelo Oliveira Ribeiro</title>
+    <title>Teaching — Marcelo Oliveira Ribeiro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="wrap">
 
-        <p class="page-title">contact information</p>
+        <p class="page-title">teaching</p>
 
         <hr class="rule-thick">
 
-        <dl class="contact-table">
-            <dt>Mailing address:</dt>
+        <dl class="teaching-table">
+
+            <dt>2026</dt>
             <dd>
-                Marcelo Oliveira Ribeiro<br>
-                <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Department of Mathematics</a><br>
-                <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Federal University of Maranhão</a><br>
-                São Luís, Maranhão<br>
-                Brazil
+                Statistics and Probability<br>
+                Differential and Integral Calculus
             </dd>
 
-            <dt>E-mail:</dt>
-            <dd>marcelo.or@ufma.br</dd>
+            <dt>2025</dt>
+            <dd>
+                Differential and Integral Calculus<br>
+                Basic Mathematics
+            </dd>
+
+            <dt>2024</dt>
+            <dd>
+                Statistics and Probability<br>
+                Ordinary Differential Equations
+            </dd>
+
+            <dt>2023</dt>
+            <dd>
+                Basic Mathematics<br>
+                Linear Algebra
+            </dd>
+
         </dl>
 
         <p class="back-link"><a href="index.html">← back to home</a></p>
@@ -34,3 +48,20 @@
 
 </body>
 </html>
+
+E no styles.css, eu usaria algo muito discreto:
+
+.teaching-table {
+    margin: 0;
+}
+
+.teaching-table dt {
+    font-weight: normal;
+    margin-top: 22px;
+    margin-bottom: 5px;
+}
+
+.teaching-table dd {
+    margin: 0 0 18px 0;
+    line-height: 1.5;
+}
