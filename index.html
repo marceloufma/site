@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Marcelo Oliveira Ribeiro — mathematician working on transcendental number theory. Assistant Professor at the Federal University of Maranhão.">
-    <meta name="keywords" content="Mathematics, Transcendental Number Theory, UFMA, Professor, Diophantine Approximation">
-    <meta name="author" content="Marcelo Oliveira Ribeiro">
     <title>Marcelo Oliveira Ribeiro</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -14,7 +11,8 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            font-family: serif; /* Mantém a tipografia acadêmica clássica */
+            font-family: "Times New Roman", Times, Georgia, serif; /* Fonte exata da foto de referência */
+            color: #000;
         }
 
         body {
@@ -26,7 +24,7 @@
 
         .wrap {
             width: 100%;
-            max-width: 750px;
+            max-width: 780px;
             padding: 20px;
             box-sizing: border-box;
         }
@@ -36,46 +34,67 @@
             display: flex;
             align-items: flex-start;
             gap: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 8px;
         }
 
+        /* Foto com moldura preta colada */
         .avatar {
-            width: 130px;
-            height: auto;
-            border: 1px solid #000; /* Borda preta estilo foto acadêmica */
+            width: 145px;
+            height: 180px;
+            border: 1px solid #000;
+            object-fit: cover;
             flex-shrink: 0;
         }
 
+        .name-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 5px;
+        }
+
+        /* Nome em destaque grande */
         .name-block h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.2rem;
+            margin: 0 0 16px 0;
+            font-size: 2.8rem;
             font-weight: normal;
+            line-height: 1;
+            letter-spacing: -0.5px;
         }
 
-        .name-block p {
+        /* Texto do cargo e universidade exatamente como na foto */
+        .affiliation {
             margin: 0;
-            font-size: 1.1rem;
-            line-height: 1.4;
+            font-size: 1.25rem; /* Tamanho maior idêntico à imagem de referência */
+            line-height: 1.25;
+            color: #000;
         }
 
+        .affiliation a {
+            color: #0000ee;
+            text-decoration: underline;
+        }
+
+        /* Linha divisória horizontal */
         .rule-thick {
             border: 0;
-            border-top: 2px solid #555;
-            margin: 15px 0 25px 0;
+            border-top: 2px solid #777;
+            margin: 12px 0 20px 0;
         }
 
         .intro {
-            line-height: 1.5;
-            font-size: 1.05rem;
+            line-height: 1.45;
+            font-size: 1.1rem;
             text-align: justify;
+            margin-bottom: 25px;
         }
 
-        /* Centraliza a seção das duas colunas de links */
+        /* Centralização do bloco de links */
         .link-columns {
             display: flex;
             justify-content: center;
-            gap: 60px;
-            margin: 25px 0;
+            gap: 70px;
+            margin: 25px 0 35px 0;
         }
 
         .link-columns ul {
@@ -84,19 +103,30 @@
         }
 
         .link-columns li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
         }
 
-        /* Rodapé atualizado com alinhamento central */
+        .link-columns a {
+            color: #0000ee;
+        }
+
+        /* Rodapé com Mathematics at UFMA e Last updated */
         .affil-row {
             text-align: center;
-            margin-top: 35px;
-            font-size: 0.95rem;
-            color: #333;
+            margin-top: 30px;
+            font-size: 1.05rem;
         }
 
         .affil-row a {
             color: #0000ee;
+        }
+
+        .last-update {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -106,9 +136,15 @@
 
         <div class="header-row">
             <img class="avatar" src="me.jpg" alt="Photo of Marcelo Oliveira Ribeiro">
+            
             <div class="name-block">
                 <h1>Marcelo Oliveira Ribeiro</h1>
-                <p>Assistant Professor, <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Federal University of Maranhão</a>, Brazil</p>
+                
+                <p class="affiliation">
+                    Assistant Professor, <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Federal University of Maranhão</a>, Brazil
+                    <!-- Se você tiver um segundo cargo/afiliação como no exemplo da foto, basta descomentar a linha abaixo: -->
+                    <!-- <br>and Guest Researcher, <a href="#">Another University</a>, Country -->
+                </p>
             </div>
         </div>
 
@@ -127,11 +163,9 @@
             </ul>
         </div>
 
-        <p class="affil-row">
-            · <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Mathematics at UFMA</a> ·
-            <br><br>
-            <small style="color: #666;">Last updated: September 20, 2026</small>
-        </p>
+        <p class="affil-row">· <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Mathematics at UFMA</a> ·</p>
+        
+        <p class="last-update">Last updated: September 20, 2026</p>
 
     </div>
 
