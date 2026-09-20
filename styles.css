@@ -19,16 +19,12 @@
 
 html,
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     background: #ffffff;
     color: var(--ink);
 
@@ -40,7 +36,9 @@ body {
 .wrap {
     width: 100%;
     max-width: var(--max);
-    padding: var(--side-pad);
+
+    margin: 0 auto;
+    padding: 40px var(--side-pad) 50px;
 }
 
 
@@ -52,12 +50,14 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 26px;
+
     margin-bottom: 10px;
 }
 
 .avatar {
     width: 150px;
     height: 190px;
+
     flex-shrink: 0;
 
     object-fit: cover;
@@ -68,13 +68,12 @@ body {
 .name-block {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 
     padding-top: 2px;
 }
 
 .name-block h1 {
-    margin: 0 0 12px 0;
+    margin: 0 0 12px;
 
     font-size: 2.4rem;
     font-weight: normal;
@@ -106,7 +105,7 @@ body {
     border: 0;
     border-top: 2px solid var(--rule-thick);
 
-    margin: 20px 0 24px 0;
+    margin: 20px 0 24px;
 }
 
 .rule-thin {
@@ -174,17 +173,17 @@ body {
 .page-title {
     margin: 0 0 10px;
 
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: normal;
-    line-height: 1.1;
+    line-height: 1.2;
 
-    letter-spacing: -0.5px;
+    letter-spacing: -0.3px;
 }
 
 .subpage-intro {
     margin: 18px 0 28px;
 
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.5;
 }
 
@@ -199,9 +198,9 @@ body {
 --------------------------------------------------------- */
 
 .section-label {
-    margin: 25px 0 15px;
+    margin: 24px 0 12px;
 
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: normal;
 }
 
@@ -211,22 +210,22 @@ body {
 --------------------------------------------------------- */
 
 .entry-list {
-    margin: 0 0 25px;
-    padding-left: 42px;
+    margin: 0 0 22px;
+    padding-left: 34px;
 
     list-style: decimal;
 }
 
 .entry-list li {
-    margin-bottom: 18px;
-    padding-left: 5px;
+    margin-bottom: 14px;
+    padding-left: 4px;
 
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     line-height: 1.45;
 }
 
 .entry-list li::marker {
-    font-weight: normal;
+    font-size: 1rem;
 }
 
 
@@ -312,9 +311,9 @@ body {
 --------------------------------------------------------- */
 
 .back-link {
-    margin-top: 40px;
+    margin-top: 35px;
 
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
 
 .back-link a {
@@ -347,20 +346,17 @@ a:hover {
 
 @media (max-width: 700px) {
 
-    body {
-        align-items: flex-start;
-    }
-
     .wrap {
-        padding: 30px 20px 50px;
+        padding: 30px 20px 45px;
     }
 
     .name-block h1 {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     .link-row {
         flex-wrap: wrap;
+        gap: 15px 35px;
     }
 }
 
@@ -377,12 +373,28 @@ a:hover {
     }
 
     .name-block h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
+    }
+
+    .affiliation {
+        font-size: 1.35rem;
     }
 
     .link-row {
         justify-content: flex-start;
-        gap: 20px;
+        gap: 12px 25px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .entry-list {
+        padding-left: 30px;
+    }
+
+    .entry-list li {
+        font-size: 1rem;
     }
 
     .contact-table {
