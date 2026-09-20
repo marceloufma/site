@@ -1,395 +1,122 @@
 /* ---------------------------------------------------------
    Marcelo Oliveira Ribeiro — academic homepage
-   Conventional structure (top nav, hero, stacked sections)
-   but anchored to the left edge of the viewport rather than
-   centered — extra space is left to breathe on the right
-   on wide screens instead of framing the content on both sides.
+   Plain, classic academic style: system serif, black on white,
+   modest blue links, hairline rules between sections, no
+   navigation bar or decoration. Left-anchored, not centered.
 --------------------------------------------------------- */
 
 :root {
-    --bg: #FDFDFC;
-    --ink: #17181A;
-    --ink-muted: #55585C;
-    --accent: #1F3C63;
-    --brass: #9C7A2E;
-    --rule: #DEDBD1;
-    --rule-strong: #C7C3B6;
-    --content-max: 760px;
-    --side-pad: clamp(24px, 6vw, 72px);
+    --ink: #111111;
+    --muted: #444444;
+    --link: #1a4b8c;
+    --rule: #cccccc;
+    --max: 700px;
+    --side-pad: clamp(20px, 6vw, 64px);
 }
 
 * { box-sizing: border-box; }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 76px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    * { animation: none !important; transition: none !important; }
-}
-
 body {
     margin: 0;
-    background: var(--bg);
+    background: #ffffff;
     color: var(--ink);
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16.5px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 17px;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
-    font-family: "Newsreader", Georgia, serif;
-    font-weight: 500;
-    color: var(--ink);
-    margin: 0;
+.wrap {
+    max-width: var(--max);
+    padding: 48px var(--side-pad) 64px;
 }
 
 a {
-    color: var(--accent);
-    text-decoration-color: var(--rule-strong);
-    text-underline-offset: 3px;
-    transition: text-decoration-color 0.15s ease, color 0.15s ease;
+    color: var(--link);
 }
 
-a:hover { text-decoration-color: var(--accent); }
+a:hover { text-decoration: none; }
 
-a:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-    border-radius: 2px;
+hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 26px 0;
 }
 
-.skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    background: var(--ink);
-    color: var(--bg);
-    padding: 10px 16px;
-    z-index: 100;
+.photo {
+    float: right;
+    width: 130px;
+    height: auto;
+    margin: 0 0 12px 20px;
 }
 
-.skip-link:focus {
-    left: 16px;
-    top: 16px;
-    z-index: 100;
-}
-
-/* Left-anchored wrapper: fixed left padding, max reading width,
-   no auto margins — the block stays pinned to the left edge. */
-.wrap {
-    max-width: var(--content-max);
-    padding-left: var(--side-pad);
-    padding-right: 24px;
-    margin: 0;
-}
-
-/* ---------------- Top nav ---------------- */
-
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(253, 253, 252, 0.92);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid var(--rule);
-}
-
-.header-inner {
-    max-width: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    height: 60px;
-    padding-right: var(--side-pad);
-}
-
-.site-mark {
-    font-family: "Newsreader", serif;
-    font-style: italic;
-    font-size: 1rem;
-    color: var(--ink);
-    text-decoration: none;
-}
-
-.site-header nav {
-    display: flex;
-    gap: 26px;
-}
-
-.site-header nav a {
-    color: var(--ink-muted);
-    font-size: 0.92rem;
-    text-decoration: none;
-}
-
-.site-header nav a:hover { color: var(--accent); }
-
-/* ---------------- Hero ---------------- */
-
-.hero {
-    border-bottom: 1px solid var(--rule);
-}
-
-.hero-inner {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    padding-top: 52px;
-    padding-bottom: 52px;
-}
-
-.hero-photo {
-    flex-shrink: 0;
-    width: 108px;
-    height: 108px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid var(--rule-strong);
-}
-
-.hero-kicker {
-    font-size: 0.95rem;
-    color: var(--brass);
+h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
     margin: 0 0 6px;
 }
 
-.hero h1 {
-    font-size: 2.15rem;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-    margin-bottom: 8px;
-}
-
-.hero-role {
-    font-family: "Inter", sans-serif;
-    color: var(--ink-muted);
-    font-size: 1rem;
-    margin: 0 0 10px;
-}
-
-.hero-email {
-    display: inline-block;
-    font-size: 0.95rem;
-    text-decoration: none;
-}
-
-.hero-email:hover { text-decoration: underline; }
-
-/* ---------------- Sections ---------------- */
-
-main.wrap { padding-top: 0; }
-
-.section {
-    padding: 48px 0;
-    border-bottom: 1px solid var(--rule);
-}
-
-main.wrap > .section:last-of-type { border-bottom: none; }
-
-.section h2 {
-    font-size: 1.45rem;
-    font-style: italic;
-    margin-bottom: 20px;
-}
-
-.subhead {
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    font-size: 0.85rem;
-    color: var(--ink-muted);
-    margin: 34px 0 14px;
-}
-
-.subhead:first-of-type { margin-top: 0; }
-
-.lede {
-    font-family: "Newsreader", serif;
-    font-size: 1.15rem;
-    line-height: 1.65;
-    color: var(--ink);
-    margin-bottom: 14px;
-}
-
-.section p { margin: 0 0 14px; max-width: 62ch; }
-.section p:last-child { margin-bottom: 0; }
-
-.mathvar {
-    font-family: "Newsreader", serif;
-    font-style: italic;
-}
-
-/* ---------------- Education timeline ---------------- */
-
-.timeline {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.timeline li {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 20px;
-    padding: 16px 0;
-    border-top: 1px solid var(--rule);
-}
-
-.timeline li:first-child { border-top: none; padding-top: 0; }
-
-.timeline-years {
-    font-size: 0.88rem;
-    color: var(--ink-muted);
-    padding-top: 2px;
-}
-
-.timeline-degree {
-    font-family: "Newsreader", serif;
-    font-size: 1.08rem;
-    margin: 0 0 2px;
-}
-
-.timeline-place {
-    color: var(--ink-muted);
-    margin: 0 0 6px;
-    font-size: 0.95rem;
-}
-
-.timeline-detail {
-    font-size: 0.92rem;
-    color: var(--ink-muted);
-    margin: 0;
-}
-
-/* ---------------- Publications ---------------- */
-
-.pub-list {
-    list-style: none;
-    counter-reset: pub;
-    margin: 0 0 8px;
-    padding: 0;
-}
-
-.pub-list li {
-    position: relative;
-    padding: 16px 0 16px 30px;
-    border-top: 1px solid var(--rule);
-    counter-increment: pub;
-}
-
-.pub-list li:first-child { border-top: none; padding-top: 0; }
-
-.pub-list li::before {
-    content: counter(pub) ".";
-    position: absolute;
-    left: 0;
-    top: 16px;
-    font-size: 0.88rem;
-    color: var(--brass);
-    font-variant-numeric: tabular-nums;
-}
-
-.pub-list li:first-child::before { top: 0; }
-
-.pub-authors {
-    font-size: 0.9rem;
-    color: var(--ink-muted);
-    margin: 0 0 3px;
-}
-
-.pub-authors strong { color: var(--ink); font-weight: 600; }
-
-.pub-title {
-    font-family: "Newsreader", serif;
-    font-size: 1.05rem;
+.title {
     margin: 0 0 4px;
+    color: var(--muted);
+    font-style: italic;
 }
 
-.pub-title a { text-decoration: none; }
-.pub-title a:hover { text-decoration: underline; }
-
-.pub-venue {
-    font-size: 0.86rem;
-    color: var(--ink-muted);
-    margin: 0;
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 12px;
 }
 
-.pub-venue a { font-size: inherit; }
-
-/* ---------------- Teaching ---------------- */
-
-.teaching-block { margin-bottom: 30px; }
-.teaching-block:last-child { margin-bottom: 0; }
-
-.teaching-institution {
-    font-family: "Newsreader", serif;
-    font-size: 1.05rem;
-    margin: 0 0 10px;
+h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 20px 0 8px;
 }
 
-.teaching-institution a { text-decoration: none; }
-.teaching-institution a:hover { text-decoration: underline; }
+h3:first-of-type { margin-top: 0; }
 
-.course-list {
+p { margin: 0 0 14px; }
+
+.quicklinks {
     list-style: none;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0 0 14px;
     padding: 0;
 }
 
-.course-list li {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 9px 0;
-    border-top: 1px solid var(--rule);
-    font-size: 0.95rem;
+.quicklinks li:not(:last-child)::after {
+    content: " \00b7 ";
+    color: var(--muted);
 }
 
-.course-list li:first-child { border-top: none; }
-
-.course-years {
-    color: var(--ink-muted);
-    font-size: 0.85rem;
-    text-align: right;
-    white-space: nowrap;
+.plain-list, .pub-list {
+    margin: 0;
+    padding-left: 22px;
 }
 
-/* ---------------- Footer ---------------- */
-
-footer.wrap {
-    padding-top: 28px;
-    padding-bottom: 56px;
-    color: var(--ink-muted);
-    font-size: 0.82rem;
+.plain-list li, .pub-list li {
+    margin-bottom: 10px;
+    padding-left: 4px;
 }
 
-/* ---------------- Responsive ---------------- */
+.plain-list li:last-child, .pub-list li:last-child { margin-bottom: 0; }
 
-@media (max-width: 640px) {
-    :root { --side-pad: 20px; }
+.plain-list.compact li { margin-bottom: 5px; }
 
-    .header-inner { padding-right: 20px; }
-    .site-header nav { gap: 14px; }
-    .site-header nav a { font-size: 0.85rem; }
+.footer {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
 
-    .hero-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 36px;
-        padding-bottom: 36px;
-        gap: 18px;
+@media (max-width: 520px) {
+    .photo {
+        float: none;
+        display: block;
+        margin: 0 0 16px;
+        width: 100px;
     }
-    .hero-photo { width: 84px; height: 84px; }
-    .hero h1 { font-size: 1.8rem; }
-
-    .section { padding: 36px 0; }
-
-    .timeline li { grid-template-columns: 1fr; gap: 4px; }
-
-    .course-list li { flex-direction: column; gap: 2px; }
-    .course-years { text-align: left; }
 }
