@@ -1,107 +1,132 @@
 /* ---------------------------------------------------------
    Marcelo Oliveira Ribeiro — academic homepage
-   Precise match to the reference layout: serif body text,
-   a thick grey rule under the header, default-style
-   underlined blue links, two-column link lists, numbered
-   publication/talk entries.
 --------------------------------------------------------- */
 
 :root {
     --ink: #000000;
-    --muted: #333333;
-    --link: #0645AD;
-    --rule-thick: #888888;
+    --muted: #555555;
+    --link: #0000ee;
+    --rule-thick: #777777;
     --rule-thin: #cccccc;
-    --max: 760px;
-    --side-pad: clamp(20px, 6vw, 56px);
+    --max: 900px;
+    --side-pad: 24px;
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #ffffff;
     color: var(--ink);
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, Georgia, serif;
     font-size: 17px;
-    line-height: 1.55;
+    line-height: 1.5;
 }
 
 .wrap {
+    width: 100%;
     max-width: var(--max);
-    padding: 40px var(--side-pad) 64px;
+    padding: var(--side-pad);
 }
 
-a {
-    color: var(--link);
-    text-decoration: underline;
-}
-
-a:hover { text-decoration: none; }
-
-/* ---------------- Header (home page) ---------------- */
+/* ---------------- Header ---------------- */
 
 .header-row {
     display: flex;
     align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 18px;
+    gap: 26px;
+    margin-bottom: 10px;
 }
 
 .avatar {
+    width: 150px;
+    height: 190px;
     flex-shrink: 0;
-    width: 140px;
-    height: 140px;
     object-fit: cover;
     border: 1px solid #000000;
 }
 
-.name-block h1 {
-    font-size: 2.4rem;
-    font-weight: normal;
-    margin: 0 0 10px;
+.name-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2px;
 }
 
-.name-block p {
-    margin: 0 0 2px;
-    font-size: 1rem;
+.name-block h1 {
+    margin: 0 0 12px 0;
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.affiliation {
+    margin: 0;
+    font-size: 1.55rem;
+    line-height: 1.4;
+    color: var(--ink);
+}
+
+.affiliation a {
+    color: var(--link);
+    text-decoration: underline;
 }
 
 .rule-thick {
-    border: none;
-    border-top: 3px solid var(--rule-thick);
-    margin: 0 0 22px;
+    border: 0;
+    border-top: 2px solid var(--rule-thick);
+    margin: 20px 0 24px 0;
 }
 
 .rule-thin {
-    border: none;
+    border: 0;
     border-top: 1px solid var(--rule-thin);
     margin: 22px 0;
 }
 
-.intro { margin: 0 0 24px; }
+/* ---------------- Home introduction ---------------- */
 
-/* ---------------- Two-column link list ---------------- */
+.intro {
+    margin: 0 0 25px;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    text-align: justify;
+}
 
-.link-columns {
+/* ---------------- Home links ---------------- */
+
+.link-row {
     display: flex;
-    gap: 60px;
-    margin: 0 0 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 30px 0 35px;
+    font-size: 1.15rem;
 }
 
-.link-columns ul {
-    margin: 0;
-    padding-left: 20px;
+.link-row a {
+    color: var(--link);
 }
 
-.link-columns li { margin-bottom: 8px; }
+/* ---------------- Last update ---------------- */
 
-/* ---------------- Bottom affiliation row ---------------- */
-
-.affil-row {
+.last-update {
     text-align: center;
-    margin: 32px 0 0;
-    font-size: 0.95rem;
+    margin: 15px 0 0;
+    font-size: 0.9rem;
+    color: var(--muted);
 }
 
 /* ---------------- Subpages ---------------- */
@@ -113,7 +138,9 @@ a:hover { text-decoration: none; }
     margin: 0 0 4px;
 }
 
-.subpage-intro { margin: 0 0 26px; }
+.subpage-intro {
+    margin: 0 0 26px;
+}
 
 .section-label {
     font-size: 0.95rem;
@@ -121,6 +148,8 @@ a:hover { text-decoration: none; }
     color: var(--muted);
     margin: 0 0 10px;
 }
+
+/* ---------------- Publications / talks ---------------- */
 
 .entry-list {
     list-style: decimal;
@@ -133,25 +162,59 @@ a:hover { text-decoration: none; }
     padding-left: 4px;
 }
 
-.entry-list li::marker { color: var(--muted); }
+.entry-list li::marker {
+    color: var(--muted);
+}
 
-.entry-coauthors { font-style: normal; }
-.entry-title { font-style: italic; }
-.entry-venue strong { font-style: normal; }
+.entry-coauthors {
+    font-style: normal;
+}
+
+.entry-title {
+    font-style: italic;
+}
+
+.entry-venue strong {
+    font-style: normal;
+}
 
 .year-heading {
     font-size: 1.1rem;
+    font-weight: normal;
     margin: 26px 0 12px;
 }
 
-.year-heading:first-of-type { margin-top: 0; }
+.year-heading:first-of-type {
+    margin-top: 0;
+}
 
 .soon-note {
     color: var(--muted);
     font-style: italic;
 }
 
-/* ---------------- Contact table ---------------- */
+/* ---------------- Teaching ---------------- */
+
+.teaching-table {
+    margin: 0;
+}
+
+.teaching-table dt {
+    font-weight: normal;
+    margin: 22px 0 5px;
+    font-size: 1.15rem;
+}
+
+.teaching-table dt:first-child {
+    margin-top: 0;
+}
+
+.teaching-table dd {
+    margin: 0 0 18px;
+    line-height: 1.5;
+}
+
+/* ---------------- Contact ---------------- */
 
 .contact-table {
     display: grid;
@@ -171,19 +234,80 @@ a:hover { text-decoration: none; }
     margin: 0;
 }
 
-.contact-table dd + dt { margin-top: 0; }
+.contact-table dd + dt {
+    margin-top: 0;
+}
 
 /* ---------------- Back link ---------------- */
 
-.back-link { margin-top: 10px; }
+.back-link {
+    margin-top: 30px;
+}
+
+/* ---------------- Links ---------------- */
+
+a {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
 
 /* ---------------- Responsive ---------------- */
 
+@media (max-width: 700px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .wrap {
+        padding: 30px 20px 50px;
+    }
+
+    .name-block h1 {
+        font-size: 2.5rem;
+    }
+
+    .affiliation {
+        font-size: 1.35rem;
+    }
+
+    .link-row {
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 560px) {
-    .header-row { flex-direction: column; }
-    .avatar { width: 110px; height: 110px; }
-    .name-block h1 { font-size: 1.9rem; }
-    .link-columns { flex-direction: column; gap: 4px; }
-    .contact-table { grid-template-columns: 1fr; row-gap: 4px; }
-    .contact-table dt { margin-top: 14px; }
+    .header-row {
+        flex-direction: column;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 190px;
+    }
+
+    .name-block h1 {
+        font-size: 2.4rem;
+    }
+
+    .affiliation {
+        font-size: 1.3rem;
+    }
+
+    .link-row {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .contact-table {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+    }
+
+    .contact-table dt {
+        margin-top: 14px;
+    }
 }
