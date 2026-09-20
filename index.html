@@ -14,6 +14,7 @@
             height: 100%;
             margin: 0;
             padding: 0;
+            font-family: serif; /* Mantém a tipografia acadêmica clássica */
         }
 
         body {
@@ -30,12 +31,51 @@
             box-sizing: border-box;
         }
 
-        /* Centraliza a secção das colunas de links */
+        /* Estrutura do cabeçalho lado a lado com a foto */
+        .header-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .avatar {
+            width: 130px;
+            height: auto;
+            border: 1px solid #000; /* Borda preta estilo foto acadêmica */
+            flex-shrink: 0;
+        }
+
+        .name-block h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            font-weight: normal;
+        }
+
+        .name-block p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        .rule-thick {
+            border: 0;
+            border-top: 2px solid #555;
+            margin: 15px 0 25px 0;
+        }
+
+        .intro {
+            line-height: 1.5;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Centraliza a seção das duas colunas de links */
         .link-columns {
             display: flex;
-            justify-content: center; /* Centraliza as colunas */
-            gap: 50px;               /* Distância entre a coluna da esquerda e da direita */
-            margin: 20px 0;
+            justify-content: center;
+            gap: 60px;
+            margin: 25px 0;
         }
 
         .link-columns ul {
@@ -43,9 +83,20 @@
             margin: 0;
         }
 
+        .link-columns li {
+            margin-bottom: 6px;
+        }
+
+        /* Rodapé atualizado com alinhamento central */
         .affil-row {
-            text-align: center;      /* Centraliza também o texto no rodapé */
-            margin-top: 30px;
+            text-align: center;
+            margin-top: 35px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .affil-row a {
+            color: #0000ee;
         }
     </style>
 </head>
@@ -57,7 +108,7 @@
             <img class="avatar" src="me.jpg" alt="Photo of Marcelo Oliveira Ribeiro">
             <div class="name-block">
                 <h1>Marcelo Oliveira Ribeiro</h1>
-                <p>Assistant Professor, <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Federal University of Maranhão,</a> Brazil</p>
+                <p>Assistant Professor, <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Federal University of Maranhão</a>, Brazil</p>
             </div>
         </div>
 
@@ -76,7 +127,11 @@
             </ul>
         </div>
 
-        <p class="affil-row">· <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Mathematics at UFMA</a> ·</p>
+        <p class="affil-row">
+            · <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Mathematics at UFMA</a> ·
+            <br><br>
+            <small style="color: #666;">Last updated: September 20, 2026</small>
+        </p>
 
     </div>
 
