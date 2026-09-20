@@ -15,12 +15,12 @@ body {
 
 .wrap {
     width: 100%;
-    max-width: 800px; /* Largura máxima uniforme para todo o conteúdo */
+    max-width: 800px; /* Alinha a largura máxima de toda a página */
     padding: 24px;
     box-sizing: border-box;
 }
 
-/* Estrutura do cabeçalho */
+/* --- CABEÇALHO COMPACTO --- */
 .header-row {
     display: flex;
     align-items: flex-start;
@@ -28,7 +28,7 @@ body {
     margin-bottom: 8px;
 }
 
-/* Foto em tamanho menor e proporcional */
+/* Foto proporcionalmente menor */
 .avatar {
     width: 120px;
     height: 155px;
@@ -43,7 +43,7 @@ body {
     justify-content: flex-start;
 }
 
-/* Nome com fonte reduzida */
+/* Nome mais compacto */
 .name-block h1 {
     margin: 0 0 6px 0;
     font-size: 2.2rem;
@@ -52,7 +52,7 @@ body {
     letter-spacing: -0.5px;
 }
 
-/* Informações de cargo/afiliação compactas */
+/* Afiliação e cargo em tamanho equilibrado */
 .affiliation {
     margin: 0;
     font-size: 1.15rem;
@@ -65,14 +65,14 @@ body {
     text-decoration: underline;
 }
 
-/* Linha divisória */
+/* --- DIVISÓRIA --- */
 .rule-thick {
     border: 0;
     border-top: 1px solid #777;
     margin: 16px 0 20px 0;
 }
 
-/* Texto introdutório */
+/* --- TEXTO PRINCIPAL --- */
 .intro {
     line-height: 1.5;
     font-size: 1.1rem;
@@ -80,10 +80,10 @@ body {
     margin-bottom: 30px;
 }
 
-/* Links alinhados de ponta a ponta (mesma largura do texto) */
+/* --- LINKS EM LINHA ÚNICA (LARGURA TOTAL) --- */
 .link-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribui os 4 links uniformemente de ponta a ponta */
     align-items: center;
     width: 100%;
     margin: 30px 0 40px 0;
@@ -95,7 +95,7 @@ body {
     text-decoration: underline;
 }
 
-/* Data de atualização no rodapé */
+/* --- RODAPÉ --- */
 .last-update {
     text-align: center;
     font-size: 0.9rem;
