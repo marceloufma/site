@@ -8,6 +8,31 @@
     <meta name="author" content="Marcelo Oliveira Ribeiro">
     <title>Marcelo Oliveira Ribeiro</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Garante que o body ocupe 100% da altura da janela */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Usa Flexbox no body para centralizar o contêiner .wrap na horizontal e vertical */
+        body {
+            display: flex;
+            justify-content: center; /* Centralização horizontal */
+            align-items: center;     /* Centralização vertical */
+            background-color: #ffffff; /* Ajuste a cor de fundo se desejado */
+        }
+
+        /* Define uma largura máxima para o conteúdo não espalhar demais em telas grandes */
+        .wrap {
+            width: 100%;
+            max-width: 750px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
 
