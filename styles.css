@@ -1,5 +1,5 @@
 /* ---------------------------------------------------------
-   Marcelo Oliveira Ribeiro — academic homepage
+   Marcelo Oliveira Ribeiro — academic website
 --------------------------------------------------------- */
 
 :root {
@@ -9,22 +9,27 @@
     --rule-thick: #777777;
     --rule-thin: #cccccc;
 
-    --max: 900px;
-    --side-pad: 24px;
+    --max-width: 900px;
 }
+
+
+/* ---------------------------------------------------------
+   Basic reset
+--------------------------------------------------------- */
 
 * {
     box-sizing: border-box;
 }
 
-html,
-body {
+html {
     margin: 0;
     padding: 0;
-    min-height: 100%;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+
     background: #ffffff;
     color: var(--ink);
 
@@ -33,12 +38,17 @@ body {
     line-height: 1.5;
 }
 
+
+/* ---------------------------------------------------------
+   Main container
+--------------------------------------------------------- */
+
 .wrap {
     width: 100%;
-    max-width: var(--max);
+    max-width: var(--max-width);
 
     margin: 0 auto;
-    padding: 40px var(--side-pad) 50px;
+    padding: 40px 24px 60px;
 }
 
 
@@ -49,8 +59,8 @@ body {
 .header-row {
     display: flex;
     align-items: flex-start;
-    gap: 26px;
 
+    gap: 26px;
     margin-bottom: 10px;
 }
 
@@ -73,7 +83,7 @@ body {
 }
 
 .name-block h1 {
-    margin: 0 0 12px;
+    margin: 0 0 12px 0;
 
     font-size: 2.4rem;
     font-weight: normal;
@@ -167,7 +177,7 @@ body {
 
 
 /* ---------------------------------------------------------
-   Subpages
+   Subpage titles
 --------------------------------------------------------- */
 
 .page-title {
@@ -179,6 +189,11 @@ body {
 
     letter-spacing: -0.3px;
 }
+
+
+/* ---------------------------------------------------------
+   Subpage introduction
+--------------------------------------------------------- */
 
 .subpage-intro {
     margin: 18px 0 28px;
@@ -202,6 +217,7 @@ body {
 
     font-size: 1.3rem;
     font-weight: normal;
+    line-height: 1.3;
 }
 
 
@@ -211,13 +227,13 @@ body {
 
 .entry-list {
     margin: 0 0 22px;
-    padding-left: 34px;
+    padding-left: 36px;
 
-    list-style: decimal;
+    list-style-type: decimal;
 }
 
 .entry-list li {
-    margin-bottom: 14px;
+    margin: 0 0 14px 0;
     padding-left: 4px;
 
     font-size: 1.05rem;
@@ -245,7 +261,7 @@ body {
 
 
 /* ---------------------------------------------------------
-   Journals / publishers
+   Journals and publishers
 --------------------------------------------------------- */
 
 .entry-list strong {
@@ -287,8 +303,8 @@ body {
     display: grid;
     grid-template-columns: 180px 1fr;
 
-    row-gap: 22px;
     column-gap: 20px;
+    row-gap: 22px;
 
     margin-bottom: 8px;
 }
@@ -311,7 +327,7 @@ body {
 --------------------------------------------------------- */
 
 .back-link {
-    margin-top: 35px;
+    margin: 35px 0 0;
 
     font-size: 1rem;
 }
@@ -341,13 +357,13 @@ a:hover {
 
 
 /* ---------------------------------------------------------
-   Responsive
+   Mobile
 --------------------------------------------------------- */
 
 @media (max-width: 700px) {
 
     .wrap {
-        padding: 30px 20px 45px;
+        padding: 30px 20px 50px;
     }
 
     .name-block h1 {
@@ -377,7 +393,7 @@ a:hover {
     }
 
     .affiliation {
-        font-size: 1.35rem;
+        font-size: 1.55rem;
     }
 
     .link-row {
