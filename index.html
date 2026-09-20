@@ -3,85 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Header Profile - Marcelo Oliveira Ribeiro</title>
-    
+    <meta name="description" content="Marcelo Oliveira Ribeiro — mathematician working on transcendental number theory. Assistant Professor at the Federal University of Maranhão.">
+    <meta name="keywords" content="Mathematics, Transcendental Number Theory, UFMA, Professor, Diophantine Approximation">
+    <meta name="author" content="Marcelo Oliveira Ribeiro">
+    <title>Marcelo Oliveira Ribeiro</title>
+    <link rel="stylesheet" href="styles.css">
+
     <style>
-        /* Estilos globais para a página */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: serif; /* Mantém a tipografia acadêmica clássica */
+        }
+
         body {
-            margin: 0;
-            padding: 20px;
-            background-color: #ffffff;
-            font-family: serif; /* Mantém a estética clássica e limpa */
-            color: #000;
-        }
-
-        /* O contêiner do cabeçalho completo */
-        .profile-header {
-            display: flex; /* Alinha a foto e o texto lado a lado */
-            align-items: flex-start; /* Alinha o conteúdo ao topo */
-            gap: 25px; /* Espaço entre a foto e o bloco de texto */
-            max-width: 800px; /* Largura máxima para legibilidade */
-            margin: 0 auto; /* Centraliza o contêiner na página */
-            padding-bottom: 15px;
-            border-bottom: 2px solid #555; /* Linha horizontal de separação inferior */
-        }
-
-        /* Estilo da imagem do perfil */
-        .profile-photo {
-            width: 130px; /* Largura fixa para a foto */
-            height: auto; /* Mantém a proporção */
-            border: 1px solid #000; /* Borda preta fina e nítida */
-            object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-            flex-shrink: 0; /* Impede que a foto encolha */
-        }
-
-        /* O bloco que contém o nome e as afiliações */
-        .profile-info {
             display: flex;
-            flex-direction: column; /* Organiza o nome e o texto verticalmente */
-            justify-content: flex-start;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
         }
 
-        /* Título do nome */
-        .profile-info h1 {
-            margin: 0 0 10px 0; /* Remove margens padrão e adiciona espaço inferior */
-            font-size: 2.2rem; /* Tamanho grande para o nome */
-            font-weight: normal; /* Estilo mais limpo, não negrito excessivo */
-            line-height: 1.1;
+        .wrap {
+            width: 100%;
+            max-width: 750px;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        /* Bloco de texto de afiliação e cargo */
-        .affiliation-text {
+        /* Estrutura do cabeçalho lado a lado com a foto */
+        .header-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .avatar {
+            width: 130px;
+            height: auto;
+            border: 1px solid #000; /* Borda preta estilo foto acadêmica */
+            flex-shrink: 0;
+        }
+
+        .name-block h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+            font-weight: normal;
+        }
+
+        .name-block p {
             margin: 0;
-            font-size: 1.1rem; /* Tamanho de leitura confortável */
-            line-height: 1.4; /* Espaçamento de linha para legibilidade */
+            font-size: 1.1rem;
+            line-height: 1.4;
         }
 
-        /* Estilo dos links dentro da afiliação */
-        .affiliation-text a {
-            color: #0000ee; /* Azul de link padrão e limpo */
-            text-decoration: underline; /* Sublinhado para clareza */
+        .rule-thick {
+            border: 0;
+            border-top: 2px solid #555;
+            margin: 15px 0 25px 0;
+        }
+
+        .intro {
+            line-height: 1.5;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Centraliza a seção das duas colunas de links */
+        .link-columns {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 25px 0;
+        }
+
+        .link-columns ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .link-columns li {
+            margin-bottom: 6px;
+        }
+
+        /* Rodapé atualizado com alinhamento central */
+        .affil-row {
+            text-align: center;
+            margin-top: 35px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .affil-row a {
+            color: #0000ee;
         }
     </style>
 </head>
 <body>
 
-    <!-- O contêiner de perfil padronizado -->
-    <header class="profile-header">
-        
-        <!-- Imagem do Perfil (Substitua "me.jpg" pelo seu arquivo) -->
-        <img src="me.jpg" alt="Foto de Marcelo Oliveira Ribeiro" class="profile-photo">
-        
-        <!-- Bloco de Informações Pessoais -->
-        <div class="profile-info">
-            <h1>Marcelo Oliveira Ribeiro</h1>
-            
-            <p class="affiliation-text">
-                Assistant Professor, <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Federal University of Maranhão</a>, Brazil
-            </p>
+    <div class="wrap">
+
+        <div class="header-row">
+            <img class="avatar" src="me.jpg" alt="Photo of Marcelo Oliveira Ribeiro">
+            <div class="name-block">
+                <h1>Marcelo Oliveira Ribeiro</h1>
+                <p>Assistant Professor, <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Federal University of Maranhão</a>, Brazil</p>
+            </div>
         </div>
 
-    </header>
+        <hr class="rule-thick">
+
+        <p class="intro">My research interests lie in transcendental number theory. At heart, I am drawn to numbers that slip past every algebraic equation meant to capture them, such as π and e. My work sits at the intersection of Diophantine approximation, Schanuel's Conjecture, and questions of irrationality. For more information about me and my research activities please see the following links:</p>
+
+        <div class="link-columns">
+            <ul>
+                <li><a href="publications.html">publications</a></li>
+                <li><a href="talks.html">talks</a></li>
+            </ul>
+            <ul>
+                <li><a href="cv.html">curriculum vitae</a></li>
+                <li><a href="contact.html">contact information</a></li>
+            </ul>
+        </div>
+
+        <p class="affil-row">
+            · <a href="https://portalpadrao.ufma.br/site" target="_blank" rel="noopener">Mathematics at UFMA</a> ·
+            <br><br>
+            <small style="color: #666;">Last updated: September 20, 2026</small>
+        </p>
+
+    </div>
 
 </body>
 </html>
