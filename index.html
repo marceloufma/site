@@ -10,27 +10,42 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
-        /* Garante que o body ocupe 100% da altura da janela */
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
 
-        /* Usa Flexbox no body para centralizar o contêiner .wrap na horizontal e vertical */
         body {
             display: flex;
-            justify-content: center; /* Centralização horizontal */
-            align-items: center;     /* Centralização vertical */
-            background-color: #ffffff; /* Ajuste a cor de fundo se desejado */
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
         }
 
-        /* Define uma largura máxima para o conteúdo não espalhar demais em telas grandes */
         .wrap {
             width: 100%;
             max-width: 750px;
             padding: 20px;
             box-sizing: border-box;
+        }
+
+        /* Centraliza a secção das colunas de links */
+        .link-columns {
+            display: flex;
+            justify-content: center; /* Centraliza as colunas */
+            gap: 50px;               /* Distância entre a coluna da esquerda e da direita */
+            margin: 20px 0;
+        }
+
+        .link-columns ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .affil-row {
+            text-align: center;      /* Centraliza também o texto no rodapé */
+            margin-top: 30px;
         }
     </style>
 </head>
