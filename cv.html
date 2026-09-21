@@ -3,46 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae — Marcelo Oliveira Ribeiro</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Marcelo Oliveira Ribeiro - Academic CV</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Latin Modern / Computer Modern serif style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Latin+Modern+Roman&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'STIX Two Text', 'Latin Modern Roman', 'Charis SIL', Georgia, serif;
+            color: #111111;
+            background-color: #f8f9fa;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .cv-container {
+            max-width: 820px;
+        }
+
+        /* LaTeX style section titles */
+        .section-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #111111;
+            padding-bottom: 3px;
+            margin-top: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .date-col {
+            font-variant-numeric: oldstyle-nums tabular-nums;
+            white-space: nowrap;
+            color: #333333;
+        }
+
+        a {
+            color: #0d47a1;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+                font-size: 11pt;
+            }
+            .cv-container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .section-title {
+                border-bottom-color: #000000 !important;
+            }
+            a {
+                color: #000000 !important;
+                text-decoration: none !important;
+            }
+            .print-break-inside-prevent {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="py-8 px-4 sm:px-6 md:py-12">
 
-    <div class="wrap">
-
-        <p class="page-title">Curriculum Vitae</p>
-
-        <hr class="rule-thick">
-
-        <p class="year-heading">Education</p>
-        <ol class="entry-list" reversed start="3">
-            <li><strong>Ph.D. in Mathematics</strong>, University of Brasília, 2019–2023. Thesis: <a href="https://repositorio.unb.br/bitstream/10482/49667/1/2023_MarceloOliveiraRibeiro_TESE.pdf" target="_blank" rel="noopener">Results on the transcendence of some powers related to U-numbers and T-numbers</a>. Advisor: Diego Marques.</li>
-            <li><strong>M.Sc. in Mathematics</strong>, Federal University of Maranhão, 2017–2019.</li>
-            <li><strong>B.Sc. in Mathematics</strong>, State University of Maranhão, 2012–2016.</li>
-        </ol>
-
-        <hr class="rule-thin">
-
-        <p class="year-heading">Teaching — Federal University of Maranhão</p>
-        <ul>
-            <li>Basic Mathematics — 2023, 2024, 2025</li>
-            <li>Statistics and Probability — 2024, 2025, 2026</li>
-            <li>Differential and Integral Calculus — 2024, 2025, 2026</li>
-            <li>Ordinary Differential Equations — 2024</li>
-            <li>Vectors and Analytic Geometry — 2024</li>
-            <li>Linear Algebra — 2023</li>
-        </ul>
-
-        <p class="year-heading">Teaching — State University of Maranhão</p>
-        <ul>
-            <li>Differential and Integral Calculus — 2016</li>
-            <li>Vectors and Analytic Geometry — 2016</li>
-            <li>Linear Algebra — 2016</li>
-        </ul>
-
-        <p class="back-link"><a href="index.html">← back to home</a></p>
-
+    <div class="no-print fixed top-5 right-5 z-50">
+        <button onclick="window.print()" class="bg-gray-900 hover:bg-gray-800 text-white font-sans text-xs px-4 py-2.5 rounded-md shadow-md transition duration-200 flex items-center gap-2 cursor-pointer">
+            <i class="fas fa-print"></i> Print / Save PDF
+        </button>
     </div>
+
+    <!-- MAIN CV WRAPPER -->
+    <main class="cv-container mx-auto bg-white p-8 sm:p-12 md:p-14 shadow-sm border border-gray-200 rounded-sm">
+        
+        <header class="text-center mb-8 border-b pb-6 border-gray-300">
+            <h1 class="text-3xl font-bold tracking-wider text-gray-900 mb-2 uppercase">Marcelo Oliveira Ribeiro</h1>
+            <div class="text-base text-gray-800 space-y-1">
+                <p>Department of Mathematics · Federal University of Maranhão (UFMA)</p>
+                <p>São Bernardo, MA, Brazil</p>
+                <p class="text-sm pt-1 space-x-2 text-gray-700">
+                    <span><strong>Email:</strong> <a href="mailto:marcelo.ribeiro@ufma.br">marcelo.ribeiro@ufma.br</a></span>
+                    <span class="text-gray-400">|</span>
+                    <span><strong>Web:</strong> <a href="https://marceloufma.github.io/site/" target="_blank" rel="noopener">marceloufma.github.io/site/</a></span>
+                    <span class="text-gray-400">|</span>
+                    <span><strong>ORCID:</strong> <a href="https://orcid.org/0000-0002-1684-3227" target="_blank" rel="noopener">0000-0002-1684-3227</a></span>
+                </p>
+            </div>
+        </header>
+
+        <section class="print-break-inside-prevent">
+            <h2 class="section-title">1. Career Progression / Academic Positions</h2>
+            <div class="space-y-3">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2023–Present</div>
+                    <div class="md:col-span-9">
+                        <div class="font-bold text-gray-900">Assistant Professor (Professor Adjunto)</div>
+                        <div class="text-gray-700">Department of Mathematics, Federal University of Maranhão (UFMA), Brazil</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2016–2017</div>
+                    <div class="md:col-span-9">
+                        <div class="font-bold text-gray-900">Visiting Assistant Professor (Professor Substituto)</div>
+                        <div class="text-gray-700">Department of Mathematics, State University of Maranhão (UEMA), Brazil</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="print-break-inside-prevent">
+            <h2 class="section-title">2. Education</h2>
+            <div class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2019–2023</div>
+                    <div class="md:col-span-9">
+                        <div class="font-bold text-gray-900">Ph.D. in Mathematics</div>
+                        <div class="text-gray-800">University of Brasília (UnB), Brazil</div>
+                        <div class="text-sm text-gray-700 mt-0.5"><em>Thesis:</em> Results on the transcendence of some powers related to U-numbers and T-numbers.</div>
+                        <div class="text-sm text-gray-700"><em>Advisor:</em> Prof. Diego Marques. <em>Fellowship:</em> CAPES Fellow.</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2017–2019</div>
+                    <div class="md:col-span-9">
+                        <div class="font-bold text-gray-900">M.Sc. in Mathematics</div>
+                        <div class="text-gray-800">Federal University of Maranhão (UFMA), Brazil</div>
+                        <div class="text-sm text-gray-700 mt-0.5"><em>Thesis:</em> Perspectives on Higher-Order Derivatives of Quaternionic Functions.</div>
+                        <div class="text-sm text-gray-700"><em>Advisor:</em> Prof. José Antonio Pires Ferreira Marão. <em>Fellowship:</em> CAPES Fellow.</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2012–2016</div>
+                    <div class="md:col-span-9">
+                        <div class="font-bold text-gray-900">B.Sc. in Mathematics</div>
+                        <div class="text-gray-800">State University of Maranhão (UEMA), Brazil</div>
+                        <div class="text-sm text-gray-700 mt-0.5"><em>Thesis:</em> Prime Search Algorithms for Cryptographic Purposes.</div>
+                        <div class="text-sm text-gray-700"><em>Advisor:</em> Prof. João Coelho Silva Filho. <em>Fellowship:</em> CNPq Fellow.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="print-break-inside-prevent">
+            <h2 class="section-title">3. Research Interests</h2>
+            <div class="text-gray-800 leading-relaxed">
+                <p>
+                    <strong>Number Theory:</strong> Transcendental Number Theory (Diophantine Approximation, Schanuel's Conjecture, Irrationality, Values of Transcendental Functions) and Analytic Number Theory (Prime Numbers, Partitions).
+                </p>
+                <p class="mt-1 text-sm text-gray-700">
+                    <strong>Erdős Number:</strong> 3.
+                </p>
+            </div>
+        </section>
+
+        <section class="print-break-inside-prevent">
+            <h2 class="section-title">4. Awards & Honours</h2>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                <div class="md:col-span-3 text-sm font-semibold date-col">2014</div>
+                <div class="md:col-span-9 text-gray-800">
+                    <strong>Honorable Mention</strong>, Scientific Initiation Seminar (SEMIC), State University of Maranhão (UEMA).
+                </div>
+            </div>
+        </section>
+
+        <section class="print-break-inside-prevent">
+            <h2 class="section-title">5. Publications</h2>
+            
+            <h3 class="text-md font-bold italic text-gray-900 mb-2">Preprints</h3>
+            <ol class="list-decimal list-outside ml-5 space-y-1.5 text-gray-800 text-sm mb-4">
+                <li>
+                    (with S. A. Morris) Thin sets under analytic maps: a preimage principle for category and measure.
+                </li>
+            </ol>
+
+            <h3 class="text-md font-bold italic text-gray-900 mb-2">Published and Accepted Papers</h3>
+            <ol class="list-decimal list-outside ml-5 space-y-2 text-gray-800 text-sm">
+                <li>
+                    (with S. A. Morris) A note on topological aspects of transcendental self-powers, <em>Bulletin of the Australian Mathematical Society</em>, to appear (2026).
+                </li>
+                <li>
+                    (with S. I. Moreira Neto) Desigualdades matemáticas de nível olímpico: alguns problemas e soluções, <em>Professor de Matemática Online</em> 14 (2026), 20–30.
+                </li>
+                <li>
+                    (with J. A. P. F. Marão, G. R. Mendes, M. F. Borges) Mixed second-order quaternionic derivatives: advances on hypercomplex, <em>Far East Journal of Mathematical Sciences</em> 143 (2026), 511–526.
+                </li>
+                <li>
+                    (with D. Marques) 372 razões para apreciar o Teorema de Pitágoras, <em>Revista do Professor de Matemática</em> 111 (2025), 7–11.
+                </li>
+                <li>
+                    (with D. Marques, P. Trojovský) On the transcendence of power towers of Liouville numbers, <em>Indagationes Mathematicae</em> 35 (2024), 230–239.
+                </li>
+                <li>
+                    Indicação do filme X+Y, <em>É Matemática, Oxente!</em> 1 (2024), 10.
+                </li>
+                <li>
+                    (with D. Marques) On the transcendence of some powers related to U-numbers, <em>Bulletin of the Brazilian Mathematical Society (N.S.)</em> 54 (2023), 25.
+                </li>
+                <li>
+                    Um rápido passeio pelo mundo transcendente através do pi, <em>Revista do Professor de Matemática</em> 105 (2022), 16–17.
+                </li>
+            </ol>
+        </section>
+
+        <section class="print-break-inside-prevent">
+            <h2 class="section-title">6. Supervision</h2>
+            <h3 class="text-md font-bold italic text-gray-900 mb-2">Undergraduate & Specialization Students</h3>
+            <div class="space-y-2 text-sm text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2024–2026</div>
+                    <div class="md:col-span-9">
+                        <strong>Thais Pontes Aguiar</strong>, Undergraduate Thesis & PIBIC
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2024</div>
+                    <div class="md:col-span-9">
+                        <strong>Bruno Sousa Liarte</strong>, PIBIC Research Student
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2025</div>
+                    <div class="md:col-span-9">
+                        <strong>9 Specialization (Lato Sensu) & Undergraduate theses</strong> supervised at UFMA.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="print-break-inside-prevent">
+            <h2 class="section-title">7. Teaching Experience</h2>
+            <div class="space-y-3 text-sm text-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2023–2026</div>
+                    <div class="md:col-span-9">
+                        <div class="font-bold text-gray-900">Federal University of Maranhão (UFMA)</div>
+                        <div class="text-gray-700">Differential and Integral Calculus, Ordinary Differential Equations, Linear Algebra, Probability and Statistics, Basic Mathematics, Vectors and Analytic Geometry.</div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4">
+                    <div class="md:col-span-3 text-sm font-semibold date-col">2016</div>
+                    <div class="md:col-span-9">
+                        <div class="font-bold text-gray-900">State University of Maranhão (UEMA)</div>
+                        <div class="text-gray-700">Differential and Integral Calculus, Linear Algebra, Vectors and Analytic Geometry.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="print-break-inside-prevent">
+            <h2 class="section-title">8. Professional Service & Editorial</h2>
+            <div class="text-sm text-gray-800 space-y-2">
+                <div>
+                    <strong class="block mb-1 text-gray-900">Journal Refereeing:</strong>
+                    <ul class="list-disc list-inside ml-2 space-y-0.5 text-gray-700">
+                        <li><em>Indagationes Mathematicae</em></li>
+                        <li><em>Revista de Matemática da UFOP</em></li>
+                    </ul>
+                </div>
+                <div class="pt-1">
+                    <strong class="block mb-1 text-gray-900">Ad-hoc Peer Reviewing & Consulting:</strong>
+                    <p class="text-gray-700">Referee / Ad-hoc Consultant for PIBIC research projects (2021–2023).</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-12 pt-4 border-t border-gray-200 text-center text-xs text-gray-500 font-sans">
+            Last updated: September 2026
+        </footer>
+
+    </main>
 
 </body>
 </html>
