@@ -1,436 +1,434 @@
-/* ---------------------------------------------------------
-   Marcelo Oliveira Ribeiro — academic website
---------------------------------------------------------- */
-
-:root {
-    --ink: #000000;
-    --muted: #666666;
-    --link: #0000ee;
-
-    --paper: #f8f8f5;
-
-    --rule-thick: #999999;
-    --rule-thin: #dddddd;
-
-    --max-width: 980px;
-}
-
-
-/* ---------------------------------------------------------
-   Basic reset
---------------------------------------------------------- */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-
-    background: var(--paper);
-    color: var(--ink);
-
-    font-family: "Times New Roman", Times, Georgia, serif;
-    font-size: 17px;
-    line-height: 1.5;
-}
-
-
-/* ---------------------------------------------------------
-   Main container
---------------------------------------------------------- */
-
-.wrap {
-    width: 100%;
-    max-width: var(--max-width);
-
-    margin: 0 auto;
-    padding: 64px 40px 80px;
-}
-
-
-/* ---------------------------------------------------------
-   Header
---------------------------------------------------------- */
-
-.header-row {
-    display: flex;
-    align-items: flex-start;
-
-    gap: 30px;
-    margin-bottom: 10px;
-}
-
-.avatar {
-    width: 150px;
-    height: 190px;
-
-    flex-shrink: 0;
-
-    object-fit: cover;
-
-    border: none;
-}
-
-.name-block {
-    display: flex;
-    flex-direction: column;
-
-    padding-top: 2px;
-}
-
-.name-block h1 {
-    margin: 0 0 12px 0;
-
-    font-size: 2.5rem;
-    font-weight: normal;
-    line-height: 1.05;
-
-    letter-spacing: -1px;
-}
-
-.affiliation {
-    margin: 0;
-
-    font-size: 1.1rem;
-    line-height: 1.45;
-
-    color: var(--ink);
-}
-
-.affiliation p {
-    margin: 0;
-    padding: 0;
-
-    font-size: 1.1rem;
-    line-height: 1.45;
-}
-
-.affiliation a {
-    color: var(--link);
-    text-decoration: underline;
-}
-
-
-/* ---------------------------------------------------------
-   Horizontal rules
---------------------------------------------------------- */
-
-.rule-thick {
-    border: 0;
-    border-top: 1px solid var(--rule-thick);
-
-    margin: 28px 0 32px;
-}
-
-.rule-thin {
-    border: 0;
-    border-top: 1px solid var(--rule-thin);
-
-    margin: 30px 0;
-}
-
-
-/* ---------------------------------------------------------
-   Homepage introduction
---------------------------------------------------------- */
-
-.intro {
-    margin: 0 0 30px;
-
-    font-size: 1.1rem;
-    line-height: 1.55;
-
-    text-align: justify;
-}
-
-
-/* ---------------------------------------------------------
-   Homepage navigation
---------------------------------------------------------- */
-
-.link-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 100%;
-
-    margin: 38px 0 42px;
-
-    font-size: 1.05rem;
-}
-
-.link-row a {
-    color: var(--link);
-    text-decoration: underline;
-}
-
-
-/* ---------------------------------------------------------
-   Last update
---------------------------------------------------------- */
-
-.last-update {
-    margin: 18px 0 0;
-
-    text-align: center;
-
-    font-size: 0.88rem;
-    color: var(--muted);
-}
-
-
-/* ---------------------------------------------------------
-   Subpage titles
---------------------------------------------------------- */
-
-.page-title {
-    margin: 0 0 14px;
-
-    font-size: 2.5rem;
-    font-weight: normal;
-    line-height: 1.1;
-
-    letter-spacing: -0.8px;
-}
-
-
-/* ---------------------------------------------------------
-   Subpage introduction
---------------------------------------------------------- */
-
-.subpage-intro {
-    margin: 20px 0 32px;
-
-    font-size: 1.05rem;
-    line-height: 1.55;
-}
-
-.subpage-intro a {
-    color: var(--link);
-    text-decoration: underline;
-}
-
-
-/* ---------------------------------------------------------
-   Section headings
---------------------------------------------------------- */
-
-.section-label {
-    margin: 30px 0 14px;
-
-    font-size: 1.25rem;
-    font-weight: normal;
-    line-height: 1.3;
-}
-
-
-/* ---------------------------------------------------------
-   Publication lists
---------------------------------------------------------- */
-
-.entry-list {
-    margin: 0 0 26px;
-    padding-left: 38px;
-
-    list-style-type: decimal;
-}
-
-.entry-list li {
-    margin: 0 0 16px 0;
-    padding-left: 5px;
-
-    font-size: 1.02rem;
-    line-height: 1.5;
-}
-
-.entry-list li::marker {
-    font-size: 0.95rem;
-}
-
-
-/* ---------------------------------------------------------
-   Publication titles
---------------------------------------------------------- */
-
-.entry-title {
-    color: var(--link);
-    font-style: italic;
-    text-decoration: none;
-}
-
-.entry-title:hover {
-    text-decoration: underline;
-}
-
-
-/* ---------------------------------------------------------
-   Journals and publishers
---------------------------------------------------------- */
-
-.entry-list strong {
-    font-weight: bold;
-}
-
-
-/* ---------------------------------------------------------
-   Teaching
---------------------------------------------------------- */
-
-.teaching-table {
-    margin: 0;
-}
-
-.teaching-table dt {
-    margin: 24px 0 6px;
-
-    font-size: 1.1rem;
-    font-weight: normal;
-}
-
-.teaching-table dt:first-child {
-    margin-top: 0;
-}
-
-.teaching-table dd {
-    margin: 0 0 20px;
-
-    line-height: 1.5;
-}
-
-
-/* ---------------------------------------------------------
-   Contact
---------------------------------------------------------- */
-
-.contact-table {
-    display: grid;
-    grid-template-columns: 180px 1fr;
-
-    column-gap: 24px;
-    row-gap: 22px;
-
-    margin-bottom: 10px;
-}
-
-.contact-table dt {
-    grid-column: 1;
-
-    font-weight: bold;
-}
-
-.contact-table dd {
-    grid-column: 2;
-
-    margin: 0;
-}
-
-
-/* ---------------------------------------------------------
-   Back link
---------------------------------------------------------- */
-
-.back-link {
-    margin: 40px 0 0;
-
-    font-size: 1rem;
-}
-
-.back-link a {
-    color: var(--link);
-    text-decoration: none;
-}
-
-.back-link a:hover {
-    text-decoration: underline;
-}
-
-
-/* ---------------------------------------------------------
-   General links
---------------------------------------------------------- */
-
-a {
-    color: var(--link);
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-
-/* ---------------------------------------------------------
-   Mobile
---------------------------------------------------------- */
-
-@media (max-width: 700px) {
-
-    .wrap {
-        padding: 42px 24px 60px;
-    }
-
-    .name-block h1 {
-        font-size: 2.2rem;
-    }
-
-    .link-row {
-        flex-wrap: wrap;
-        gap: 15px 35px;
-    }
-}
-
-
-@media (max-width: 560px) {
-
-    .header-row {
-        flex-direction: column;
-    }
-
-    .avatar {
-        width: 150px;
-        height: 190px;
-    }
-
-    .name-block h1 {
-        font-size: 2rem;
-    }
-
-    .affiliation,
-    .affiliation p {
-        font-size: 1.1rem;
-    }
-
-    .link-row {
-        justify-content: flex-start;
-        gap: 12px 25px;
-    }
-
-    .page-title {
-        font-size: 2rem;
-    }
-
-    .entry-list {
-        padding-left: 30px;
-    }
-
-    .entry-list li {
-        font-size: 1rem;
-    }
-
-    .contact-table {
-        grid-template-columns: 1fr;
-        row-gap: 4px;
-    }
-
-    .contact-table dt {
-        margin-top: 14px;
-    }
+/* --------------------------------------------------------- 
+   Marcelo Oliveira Ribeiro — academic website 
+--------------------------------------------------------- */ 
+ 
+:root { 
+    --ink: #000000; 
+    --muted: #555555; 
+    --link: #0000ee; 
+    --rule-thick: #777777; 
+    --rule-thin: #cccccc; 
+ 
+    --max-width: 900px; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Basic reset 
+--------------------------------------------------------- */ 
+ 
+* { 
+    box-sizing: border-box; 
+} 
+ 
+html { 
+    margin: 0; 
+    padding: 0; 
+} 
+ 
+body { 
+    margin: 0; 
+    padding: 0; 
+ 
+    background: #ffffff; 
+    color: var(--ink); 
+ 
+    font-family: "Times New Roman", Times, Georgia, serif; 
+    font-size: 17px; 
+    line-height: 1.5; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Main container 
+--------------------------------------------------------- */ 
+ 
+.wrap { 
+    width: 100%; 
+    max-width: var(--max-width); 
+ 
+    margin: 0 auto; 
+    padding: 40px 24px 60px; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Header 
+--------------------------------------------------------- */ 
+ 
+.header-row { 
+    display: flex; 
+    align-items: flex-start; 
+ 
+    gap: 26px; 
+    margin-bottom: 10px; 
+} 
+ 
+.avatar { 
+    width: 150px; 
+    height: 190px; 
+ 
+    flex-shrink: 0; 
+ 
+    object-fit: cover; 
+ 
+    border: 1px solid #000000; 
+} 
+ 
+.name-block { 
+    display: flex; 
+    flex-direction: column; 
+ 
+    padding-top: 2px; 
+} 
+ 
+.name-block h1 { 
+    margin: 0 0 8px 0; 
+ 
+    font-size: 2.2rem; 
+    font-weight: normal; 
+    line-height: 1.1; 
+ 
+    letter-spacing: -0.5px; 
+} 
+ 
+/* Ajuste do tamanho e espaçamento da afiliação */ 
+.affiliation { 
+    margin: 0; 
+ 
+    font-size: 1.15rem; 
+    line-height: 1.4; 
+ 
+    color: var(--ink); 
+} 
+ 
+/* Garante que, se houver tags <p> dentro de .affiliation, elas fiquem no mesmo tamanho */ 
+.affiliation p { 
+    margin: 0; 
+    padding: 0; 
+    font-size: 1.15rem; 
+    line-height: 1.4; 
+} 
+ 
+.affiliation a { 
+    color: var(--link); 
+    text-decoration: underline; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Horizontal rules 
+--------------------------------------------------------- */ 
+ 
+.rule-thick { 
+    border: 0; 
+    border-top: 2px solid var(--rule-thick); 
+ 
+    margin: 20px 0 24px; 
+} 
+ 
+.rule-thin { 
+    border: 0; 
+    border-top: 1px solid var(--rule-thin); 
+ 
+    margin: 24px 0; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Homepage introduction 
+--------------------------------------------------------- */ 
+ 
+.intro { 
+    margin: 0 0 25px; 
+ 
+    font-size: 1.15rem; 
+    line-height: 1.5; 
+ 
+    text-align: justify; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Homepage navigation 
+--------------------------------------------------------- */ 
+ 
+.link-row { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+ 
+    width: 100%; 
+ 
+    margin: 30px 0 35px; 
+ 
+    font-size: 1.15rem; 
+} 
+ 
+.link-row a { 
+    color: var(--link); 
+    text-decoration: underline; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Last update 
+--------------------------------------------------------- */ 
+ 
+.last-update { 
+    margin: 15px 0 0; 
+ 
+    text-align: center; 
+ 
+    font-size: 0.9rem; 
+    color: var(--muted); 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Subpage titles 
+--------------------------------------------------------- */ 
+ 
+.page-title { 
+    margin: 0 0 10px; 
+ 
+    font-size: 2.2rem; 
+    font-weight: normal; 
+    line-height: 1.2; 
+ 
+    letter-spacing: -0.3px; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Subpage introduction 
+--------------------------------------------------------- */ 
+ 
+.subpage-intro { 
+    margin: 18px 0 28px; 
+ 
+    font-size: 1.05rem; 
+    line-height: 1.5; 
+} 
+ 
+.subpage-intro a { 
+    color: var(--link); 
+    text-decoration: underline; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Section headings 
+--------------------------------------------------------- */ 
+ 
+.section-label { 
+    margin: 24px 0 12px; 
+ 
+    font-size: 1.3rem; 
+    font-weight: normal; 
+    line-height: 1.3; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Publication lists 
+--------------------------------------------------------- */ 
+ 
+.entry-list { 
+    margin: 0 0 22px; 
+    padding-left: 36px; 
+ 
+    list-style-type: decimal; 
+} 
+ 
+.entry-list li { 
+    margin: 0 0 14px 0; 
+    padding-left: 4px; 
+ 
+    font-size: 1.05rem; 
+    line-height: 1.45; 
+} 
+ 
+.entry-list li::marker { 
+    font-size: 1rem; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Publication titles 
+--------------------------------------------------------- */ 
+ 
+.entry-title { 
+    color: var(--link); 
+    font-style: italic; 
+    text-decoration: none; 
+} 
+ 
+.entry-title:hover { 
+    text-decoration: underline; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Journals and publishers 
+--------------------------------------------------------- */ 
+ 
+.entry-list strong { 
+    font-weight: bold; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Teaching 
+--------------------------------------------------------- */ 
+ 
+.teaching-table { 
+    margin: 0; 
+} 
+ 
+.teaching-table dt { 
+    margin: 22px 0 5px; 
+ 
+    font-size: 1.15rem; 
+    font-weight: normal; 
+} 
+ 
+.teaching-table dt:first-child { 
+    margin-top: 0; 
+} 
+ 
+.teaching-table dd { 
+    margin: 0 0 18px; 
+ 
+    line-height: 1.5; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Contact 
+--------------------------------------------------------- */ 
+ 
+.contact-table { 
+    display: grid; 
+    grid-template-columns: 180px 1fr; 
+ 
+    column-gap: 20px; 
+    row-gap: 22px; 
+ 
+    margin-bottom: 8px; 
+} 
+ 
+.contact-table dt { 
+    grid-column: 1; 
+ 
+    font-weight: bold; 
+} 
+ 
+.contact-table dd { 
+    grid-column: 2; 
+ 
+    margin: 0; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Back link 
+--------------------------------------------------------- */ 
+ 
+.back-link { 
+    margin: 35px 0 0; 
+ 
+    font-size: 1rem; 
+} 
+ 
+.back-link a { 
+    color: var(--link); 
+    text-decoration: none; 
+} 
+ 
+.back-link a:hover { 
+    text-decoration: underline; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   General links 
+--------------------------------------------------------- */ 
+ 
+a { 
+    color: var(--link); 
+    text-decoration: underline; 
+} 
+ 
+a:hover { 
+    text-decoration: none; 
+} 
+ 
+ 
+/* --------------------------------------------------------- 
+   Mobile 
+--------------------------------------------------------- */ 
+ 
+@media (max-width: 700px) { 
+ 
+    .wrap { 
+        padding: 30px 20px 50px; 
+    } 
+ 
+    .name-block h1 { 
+        font-size: 2.1rem; 
+    } 
+ 
+    .link-row { 
+        flex-wrap: wrap; 
+        gap: 15px 35px; 
+    } 
+} 
+ 
+ 
+@media (max-width: 560px) { 
+ 
+    .header-row { 
+        flex-direction: column; 
+    } 
+ 
+    .avatar { 
+        width: 150px; 
+        height: 190px; 
+    } 
+ 
+    .name-block h1 { 
+        font-size: 2rem; 
+    } 
+ 
+    .affiliation, 
+    .affiliation p { 
+        font-size: 1.15rem; 
+    } 
+ 
+    .link-row { 
+        justify-content: flex-start; 
+        gap: 12px 25px; 
+    } 
+ 
+    .page-title { 
+        font-size: 2rem; 
+    } 
+ 
+    .entry-list { 
+        padding-left: 30px; 
+    } 
+ 
+    .entry-list li { 
+        font-size: 1rem; 
+    } 
+ 
+    .contact-table { 
+        grid-template-columns: 1fr; 
+        row-gap: 4px; 
+    } 
+ 
+    .contact-table dt { 
+        margin-top: 14px; 
+    } 
 }
