@@ -95,7 +95,7 @@ body {
 .affiliation {
     margin: 0;
 
-    font-size: 1.55rem;
+    font-size: 1.15rem; /* Reduzido de 1.55rem para um tamanho proporcional */
     line-height: 1.4;
 
     color: var(--ink);
