@@ -83,22 +83,31 @@ body {
 }
 
 .name-block h1 {
-    margin: 0 0 12px 0;
+    margin: 0 0 8px 0;
 
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: normal;
-    line-height: 1;
+    line-height: 1.1;
 
     letter-spacing: -0.5px;
 }
 
+/* Ajuste do tamanho e espaçamento da afiliação */
 .affiliation {
     margin: 0;
 
-    font-size: 1.15rem; /* Reduzido de 1.55rem para um tamanho proporcional */
+    font-size: 1.15rem;
     line-height: 1.4;
 
     color: var(--ink);
+}
+
+/* Garante que, se houver tags <p> dentro de .affiliation, elas fiquem no mesmo tamanho */
+.affiliation p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.15rem;
+    line-height: 1.4;
 }
 
 .affiliation a {
@@ -367,7 +376,7 @@ a:hover {
     }
 
     .name-block h1 {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
     }
 
     .link-row {
@@ -389,11 +398,12 @@ a:hover {
     }
 
     .name-block h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
-    .affiliation {
-        font-size: 1.55rem;
+    .affiliation,
+    .affiliation p {
+        font-size: 1.15rem;
     }
 
     .link-row {
