@@ -294,6 +294,38 @@ body {
  
     line-height: 1.5; 
 } 
+
+/* ---------------------------------------------------------  
+   Teaching lists
+--------------------------------------------------------- */
+
+.teaching-list {
+    margin: 0 0 22px;
+    padding-left: 36px;
+    list-style-type: disc;
+}
+
+.teaching-list li {
+    margin: 0 0 14px 0;
+    padding-left: 4px;
+
+    font-size: 1.05rem;
+    line-height: 1.45;
+}
+
+.teaching-list li::marker {
+    font-size: 1rem;
+}
+
+.teaching-list .entry-details {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+.teaching-list .entry-year {
+    white-space: nowrap;
+}
  
 /* --------------------------------------------------------- 
    Contact 
@@ -418,36 +450,4 @@ a:hover {
     .contact-table dt { 
         margin-top: 14px; 
     } 
-}
-/* ---------------------------------------------------------  
-   Teaching lists
---------------------------------------------------------- */
-
-.teaching-list {
-    margin: 0 0 22px;
-    padding-left: 36px;
-    list-style-type: disc;
-}
-
-.teaching-list li {
-    margin: 0 0 14px 0;
-    padding-left: 4px;
-
-    font-size: 1.05rem;
-    line-height: 1.45;
-}
-
-.teaching-list li::marker {
-    font-size: 1rem;
-}
-
-.teaching-list .entry-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-}
-
-.teaching-list .entry-year {
-    white-space: nowrap;
 }
