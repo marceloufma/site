@@ -419,3 +419,26 @@ a:hover {
         margin-top: 14px; 
     } 
 }
+.entry-list {
+    margin: 0.8rem 0 2rem 1.2rem;
+    padding-left: 1.2rem;
+}
+
+.entry-list li {
+    margin-bottom: 0.8rem;
+}
+
+.entry-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.entry-title {
+    font-weight: normal;
+}
+
+.entry-year {
+    white-space: nowrap;
+}
