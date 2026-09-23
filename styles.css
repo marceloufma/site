@@ -419,26 +419,35 @@ a:hover {
         margin-top: 14px; 
     } 
 }
-.entry-list {
-    margin: 0.8rem 0 2rem 1.2rem;
-    padding-left: 1.2rem;
+/* ---------------------------------------------------------  
+   Teaching lists
+--------------------------------------------------------- */
+
+.teaching-list {
+    margin: 0 0 22px;
+    padding-left: 36px;
+    list-style-type: disc;
 }
 
-.entry-list li {
-    margin-bottom: 0.8rem;
+.teaching-list li {
+    margin: 0 0 14px 0;
+    padding-left: 4px;
+
+    font-size: 1.05rem;
+    line-height: 1.45;
 }
 
-.entry-details {
+.teaching-list li::marker {
+    font-size: 1rem;
+}
+
+.teaching-list .entry-details {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 1rem;
 }
 
-.entry-title {
-    font-weight: normal;
-}
-
-.entry-year {
+.teaching-list .entry-year {
     white-space: nowrap;
 }
